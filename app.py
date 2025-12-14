@@ -1,6 +1,6 @@
 import streamlit as st
 import re
-from medical_knowledge import medical_tests
+from report_analysis import analyser
 
 st.title("Medical Report Simplifier")
 st.write("Paste your medical report below")
