@@ -13,26 +13,26 @@ if st.button("Simplify"):
 
     found = False
 
-    for test in medical_tests:
+    for test in analyser:
         if test in report:
             found = True
             st.subheader(test.capitalize())
-            st.write(medical_tests[test]["description"])
+            st.write(analyser[test]["description"])
 
             numbers = re.findall(r"\d+\.?\d*", report)
 
             if numbers:
                 value = float(numbers[0])
-                low, high = medical_tests[test]["range"]
+                low, high = analyser[test]["range"]
 
                 st.write(f"Detected value: {value}")
 
                 if value < low:
                     st.error("Status: LOW")
-                    st.write(medical_tests[test]["low"])
+                    st.write(analyser[test]["low"])
                 elif value > high:
                     st.error("Status: HIGH")
-                    st.write(medical_tests[test]["high"])
+                    st.write(analyser[test]["high"])
                 else:
                     st.success("Status: NORMAL")
                     st.write("This value is within the normal range.")
