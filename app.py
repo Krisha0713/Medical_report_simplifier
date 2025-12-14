@@ -1,6 +1,6 @@
 import streamlit as st
 import re
-from report_analysis import analyser
+from report_analysis.analyser import medical_tests
 
 st.title("Medical Report Simplifier")
 st.write("Paste your medical report below")
@@ -10,29 +10,28 @@ report = st.text_area("Medical Report")
 if st.button("Simplify"):
 
     report = report.lower()
-
     found = False
 
-    for test in analyser:
+    for test in medical_tests:
         if test in report:
             found = True
             st.subheader(test.capitalize())
-            st.write(analyser[test]["description"])
+            st.write(medical_tests[test]["description"])
 
             numbers = re.findall(r"\d+\.?\d*", report)
 
             if numbers:
                 value = float(numbers[0])
-                low, high = analyser[test]["range"]
+                low, high = medical_tests[test]["range"]
 
                 st.write(f"Detected value: {value}")
 
                 if value < low:
                     st.error("Status: LOW")
-                    st.write(analyser[test]["low"])
+                    st.write(medical_tests[test]["low"])
                 elif value > high:
                     st.error("Status: HIGH")
-                    st.write(analyser[test]["high"])
+                    st.write(medical_tests[test]["high"])
                 else:
                     st.success("Status: NORMAL")
                     st.write("This value is within the normal range.")
