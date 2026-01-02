@@ -1,19 +1,21 @@
-## 👩‍💻 Author
+##  Author
 Krishna Priya R
 CSE Student | AI/ML Enthusiast
 
 ## 🩺 Medical Report Simplifier (NLP + ML + Flask)
 An AI-powered web application that simplifies complex medical reports into easy-to-understand language using Natural Language Processing and Transformer-based models, helping patients and non-medical users better understand healthcare information.
 
-## 🚀 Features
-🧠 NLP-based medical text simplification
-📄 Supports long medical reports
-🔍 Medical term detection using NER
-✂️ Sentence restructuring & jargon removal
-📊 Readability-focused output
-🧪 Transformer-based text generation
-🌐 Simple web interface using Flask
-🔐 No patient-identifiable data storage
+##  Features
+- NLP-based medical text simplification
+- Supports long medical reports
+- Medical term detection using NER
+- Sentence restructuring & jargon removal
+- Readability-focused output
+-  Transformer-based text generation
+-   Simple web interface using Flask
+-    No patient-identifiable data storage
+
+---   
 
 ## 🏗 Project Structure
 
@@ -38,8 +40,9 @@ medical_report_simplifier/
 ├── run.py
 └── README.md
 
+---
 
-## 🧪 Input
+##  Input
 
 Medical report text (copied or uploaded)
 
@@ -49,7 +52,7 @@ Diagnostic summaries
 
 Lab report explanations
 
-## 📤 Output
+## Output
 
 Simplified medical explanation
 
@@ -61,7 +64,7 @@ Preserved medical meaning
 
 Patient-friendly language
 
-## 🧠 ML Concepts Used
+##  ML Concepts Used
 
 Natural Language Processing (NLP)
 
@@ -75,7 +78,7 @@ Domain Adaptation (Medical NLP)
 
 Readability Analysis
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 Python
 
@@ -87,13 +90,14 @@ PyTorch
 
 HTML / CSS / JavaScript
 
-## ▶️ How to Run
+##  How to Run
 
 1️⃣ Install dependencies
-
+```
 pip install flask torch transformers spacy scikit-learn
-
+```
 
 2️⃣ Run the application
-
+```
 python run.py
+```
